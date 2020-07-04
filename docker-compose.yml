@@ -1,0 +1,14 @@
+version: '3.6'
+services:
+  consumer:
+    build:
+      context: .
+    command: ["node", "consumer.js"]
+
+  publisher:
+    build:
+      context: .
+    command: ["node", "publisher.js"]
+
+  redis:
+    image: redis:alpine3.12
